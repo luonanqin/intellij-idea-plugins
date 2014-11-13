@@ -5,11 +5,11 @@
     <vendor email="qinnanluo@sina.com" url="https://github.com/luonanqin/intellij-idea-plugins/tree/master/ScrollFromSource">luonq</vendor>
 
     <description><![CDATA[
-      Set the keyboard shortcut to the function of "Scroll From Source" in Project Panel.
-
-      Default shortcut is Command+Control+S for Mac.
-
-      You can set the special shortcut by yourself to all OS(window/linux/mac...)
+      Set the keyboard shortcut to the function of "Scroll From Source" in Project Panel.<br>
+      <br>
+      You can set the special shortcut by yourself to all OS(Window/Linux/Mac)<br>
+      <br>
+      Default shortcut is Command+Control+S for Mac.<br>
     ]]></description>
 
     <change-notes><![CDATA[
