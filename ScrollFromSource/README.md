@@ -1,7 +1,7 @@
 ScrollFromSource
 =====================
 
-    Today, there is not a shortcut for "Scroll From Source" in Project Panel. So I write the plugin to set the special shortcut for this function. You can set it by any shortcut
+Today, there is not a shortcut for "Scroll From Source" in Project Panel. So I write the plugin to set the special shortcut for this function. You can set it by any shortcut
 
 Set the keyboard shortcut to the function of "Scroll From Source" in Project Panel.
 
