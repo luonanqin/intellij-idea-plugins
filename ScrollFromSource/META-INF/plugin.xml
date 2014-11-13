@@ -1,0 +1,42 @@
+<idea-plugin version="2">
+    <id>luonq.ScrollFromSource</id>
+    <name>Scroll From Source</name>
+    <version>1.0.0</version>
+    <vendor email="qinnanluo@sina.com" url="https://github.com/luonanqin">luonq</vendor>
+
+    <description><![CDATA[
+      Setting the keyboard shortcut to function of "Scroll From Source"
+
+      Default shortcut is Command+Control+S
+    ]]></description>
+
+    <change-notes><![CDATA[
+      Initial version
+    ]]>
+    </change-notes>
+
+    <!-- please see http://confluence.jetbrains.com/display/IDEADEV/Build+Number+Ranges for description -->
+    <idea-version since-build="131"/>
+
+    <!-- please see http://confluence.jetbrains.com/display/IDEADEV/Plugin+Compatibility+with+IntelliJ+Platform+Products
+         on how to target different products -->
+    <!-- uncomment to enable plugin in all products
+    <depends>com.intellij.modules.lang</depends>
+    -->
+
+    <extensions defaultExtensionNs="com.intellij">
+        <!-- Add your extensions here -->
+    </extensions>
+
+    <project-components>
+        <!-- Add your project components here -->
+    </project-components>
+
+    <actions>
+        <!-- Add your actions here -->
+        <action id="ScrollFromSource" class="luonq.ScrollFromSource" text="Scroll From Source" description="ScrollFromSource">
+            <add-to-group group-id="EditorPopupMenu" anchor="after" relative-to-action="EditorPopupMenu1"/>
+            <keyboard-shortcut keymap="$default" first-keystroke="meta control S"/>
+        </action>
+    </actions>
+</idea-plugin>
