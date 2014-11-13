@@ -2,7 +2,7 @@
     <id>luonq.ScrollFromSource</id>
     <name>Scroll From Source</name>
     <version>1.0.0</version>
-    <vendor email="qinnanluo@sina.com" url="https://github.com/luonanqin/intellij-idea-plugins/tree/master/ScrollFromSource">luonq</vendor>
+    <vendor email="qinnanluo@sina.com" url="https://github.com/luonanqin/intellij-idea-plugins/tree/master/ScrollFromSource">luonanqin</vendor>
 
     <description><![CDATA[
       Set the keyboard shortcut to the function of "Scroll From Source" in Project Panel.<br>
@@ -13,18 +13,16 @@
     ]]></description>
 
     <change-notes><![CDATA[
-      Initial version
+      1.0.0 - Initial version
     ]]>
     </change-notes>
 
     <!-- please see http://confluence.jetbrains.com/display/IDEADEV/Build+Number+Ranges for description -->
-    <idea-version since-build="131"/>
+    <idea-version since-build="131.0"/>
 
     <!-- please see http://confluence.jetbrains.com/display/IDEADEV/Plugin+Compatibility+with+IntelliJ+Platform+Products
          on how to target different products -->
-    <!-- uncomment to enable plugin in all products
-    <depends>com.intellij.modules.lang</depends>
-    -->
+    <!--<depends>com.intellij.modules.lang</depends>-->
 
     <extensions defaultExtensionNs="com.intellij">
         <!-- Add your extensions here -->
