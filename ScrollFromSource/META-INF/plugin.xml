@@ -1,7 +1,7 @@
 <idea-plugin version="2">
     <id>luonq.ScrollFromSource</id>
     <name>Scroll From Source</name>
-    <version>1.0.0</version>
+    <version>1.0.1</version>
     <vendor email="qinnanluo@sina.com" url="https://github.com/luonanqin/intellij-idea-plugins/tree/master/ScrollFromSource">luonanqin</vendor>
 
     <description><![CDATA[
@@ -13,7 +13,14 @@
     ]]></description>
 
     <change-notes><![CDATA[
-      1.0.0 - Initial version
+      <p>1.0.0:</p>
+      <ul>
+        <li>Initial version</li>
+      </ul>
+      <p>1.0.1:</p>
+      <ul>
+        <li>Fix bug to adapt Intellij idea 14</li>
+      </ul>
     ]]>
     </change-notes>
 
