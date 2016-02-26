@@ -17,13 +17,15 @@ intellij-idea-plugins
 
 I have some website to learn. If you have good resource, please share to me. Thx ^_^
 
-1. [http://bjorn.tipling.com/how-to-make-an-intellij-idea-plugin-in-30-minutes](http://bjorn.tipling.com/how-to-make-an-intellij-idea-plugin-in-30-minutes)
+1. [How to make an IntelliJ IDEA plugin in less than 30 minutes](http://bjorn.tipling.com/how-to-make-an-intellij-idea-plugin-in-30-minutes)
 
-2. [https://confluence.jetbrains.com/display/IDEADEV/IntelliJ+IDEA+Action+System](https://confluence.jetbrains.com/display/IDEADEV/IntelliJ+IDEA+Action+System)
+2. [Action System](http://www.jetbrains.org/intellij/sdk/docs/basics/action_system.html)
 
-3. [https://confluence.jetbrains.com/display/IDEADEV/Getting+Started+with+Plugin+Development](https://confluence.jetbrains.com/display/IDEADEV/Getting+Started+with+Plugin+Development)
+3. [Creating Your First Plugin](http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started.html)
 
-4. [http://blog.csdn.net/dc_726/article/details/14139155](http://blog.csdn.net/dc_726/article/details/14139155) - chinese
+4. [Intellij IDEA插件开发入门](http://blog.csdn.net/dc_726/article/details/14139155) - chinese
+
+5. [Plugin Compatibility with IntelliJ Platform Products](http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html)
 
 <br />
 ### Feedback
