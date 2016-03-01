@@ -1,14 +1,19 @@
 package luonq;
 
+import com.intellij.ide.SelectInTarget;
 import com.intellij.ide.projectView.ProjectView;
+import com.intellij.ide.projectView.impl.AbstractProjectViewPane;
+import com.intellij.ide.projectView.impl.ProjectViewImpl;
 import com.intellij.openapi.actionSystem.AnAction;
 import com.intellij.openapi.actionSystem.AnActionEvent;
-import com.intellij.openapi.actionSystem.CommonDataKeys;
 import com.intellij.openapi.diagnostic.Logger;
+import com.intellij.openapi.editor.Editor;
+import com.intellij.openapi.fileEditor.FileEditorManager;
 import com.intellij.openapi.project.Project;
-import com.intellij.openapi.vfs.VirtualFile;
-import com.intellij.psi.PsiFileSystemItem;
-import com.intellij.psi.PsiManager;
+import com.intellij.psi.PsiDocumentManager;
+import com.intellij.psi.PsiFile;
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 
 /**
  * Created by Luonanqin on 11/13/14.
@@ -17,23 +22,39 @@ public class ScrollFromSource extends AnAction {
 
 	private static final Logger LOG = Logger.getInstance(ScrollFromSource.class);
 
+	private Project myProject;
+
 	public void actionPerformed(AnActionEvent e) {
+		myProject = e.getProject();
 
-		Project project = e.getProject();
-		VirtualFile file = CommonDataKeys.VIRTUAL_FILE.getData(e.getDataContext());
+		final FileEditorManager fileEditorManager = FileEditorManager.getInstance(myProject);
+		final Editor selectedTextEditor = fileEditorManager.getSelectedTextEditor();
+		if (selectedTextEditor != null) {
+			selectElementAtCaret(selectedTextEditor);
+			return;
+		} else {
+			LOG.error("selectedTextEditor is null!");
+		}
+	}
 
-		if (project != null && file != null) {
-			VirtualFile target = file.getCanonicalFile();
+	private void selectElementAtCaret(@NotNull Editor editor) {
+		final PsiFile file = PsiDocumentManager.getInstance(myProject).getPsiFile(editor.getDocument());
+		if (file == null) {
+			LOG.error("psiFile is null");
+			return;
+		}
 
-			if (target != null) {
-				PsiManager psiManager = PsiManager.getInstance(project);
-				PsiFileSystemItem psiFile = target.isDirectory() ? psiManager.findDirectory(target) : psiManager.findFile(target);
+		scrollFromFile(file, editor);
+	}
 
-				if (psiFile != null) {
-					ProjectView.getInstance(project).select(psiFile, target, false);
+	private void scrollFromFile(@NotNull PsiFile file, @Nullable Editor editor) {
+		final MySelectInContext selectInContext = new MySelectInContext(file, editor, myProject);
 
-				}
-			}
+		ProjectViewImpl projectView = (ProjectViewImpl) ProjectView.getInstance(myProject);
+		AbstractProjectViewPane currentProjectViewPane = projectView.getCurrentProjectViewPane();
+		SelectInTarget target = currentProjectViewPane.createSelectInTarget();
+		if (target != null && target.canSelect(selectInContext)) {
+			target.selectIn(selectInContext, false);
 		}
 	}
 }

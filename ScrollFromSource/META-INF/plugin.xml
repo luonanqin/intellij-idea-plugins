@@ -1,7 +1,7 @@
 <idea-plugin version="2">
     <id>luonq.ScrollFromSource</id>
     <name>Scroll From Source</name>
-    <version>1.1.0</version>
+    <version>1.1.1</version>
     <vendor email="qinnanluo@sina.com" url="https://github.com/luonanqin/intellij-idea-plugins/tree/master/ScrollFromSource">luonanqin</vendor>
     <depends>com.intellij.modules.lang</depends>
     <description><![CDATA[
@@ -25,6 +25,10 @@
       <ul>
         <li>Discard use reflecting to solve this problem</li>
         <li>Fix bug to adapt Intellij idea 15 & WebStorm 11</li>
+      </ul>
+      <p>1.1.1:</p>
+      <ul>
+        <li>Fix: Open the project window if it's closed</li>
       </ul>
     ]]>
     </change-notes>
