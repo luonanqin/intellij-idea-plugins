@@ -52,9 +52,11 @@ public class ScrollFromSource extends AnAction {
 
 		ProjectViewImpl projectView = (ProjectViewImpl) ProjectView.getInstance(myProject);
 		AbstractProjectViewPane currentProjectViewPane = projectView.getCurrentProjectViewPane();
-		SelectInTarget target = currentProjectViewPane.createSelectInTarget();
-		if (target != null && target.canSelect(selectInContext)) {
-			target.selectIn(selectInContext, false);
+		if (currentProjectViewPane != null) {
+			SelectInTarget target = currentProjectViewPane.createSelectInTarget();
+			if (target != null && target.canSelect(selectInContext)) {
+				target.selectIn(selectInContext, false);
+			}
 		}
 	}
 }

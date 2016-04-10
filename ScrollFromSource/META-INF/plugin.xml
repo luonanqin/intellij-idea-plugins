@@ -30,6 +30,10 @@
       <ul>
         <li>Fix: Open the project window if it's closed</li>
       </ul>
+      <p>1.1.2:</p>
+      <ul>
+        <li>Fix: Prevent null pointer error when PhpStorm 10 cannot find project window</li>
+      </ul>
     ]]>
     </change-notes>
 
