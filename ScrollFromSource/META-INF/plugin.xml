@@ -13,26 +13,26 @@
     ]]></description>
 
     <change-notes><![CDATA[
-      <p>1.0.0:</p>
+      <p>1.1.2:</p>
       <ul>
-        <li>Initial version</li>
+        <li>Fix: Prevent null pointer error when PhpStorm 10 cannot find project window</li>
       </ul>
-      <p>1.0.1:</p>
+      <p>1.1.1:</p>
       <ul>
-        <li>Fix bug to adapt Intellij idea 14</li>
+        <li>Fix: Open the project window if it's closed</li>
       </ul>
       <p>1.1.0:</p>
       <ul>
         <li>Discard use reflecting to solve this problem</li>
         <li>Fix bug to adapt Intellij idea 15 & WebStorm 11</li>
       </ul>
-      <p>1.1.1:</p>
+      <p>1.0.1:</p>
       <ul>
-        <li>Fix: Open the project window if it's closed</li>
+        <li>Fix bug to adapt Intellij idea 14</li>
       </ul>
-      <p>1.1.2:</p>
+      <p>1.0.0:</p>
       <ul>
-        <li>Fix: Prevent null pointer error when PhpStorm 10 cannot find project window</li>
+        <li>Initial version</li>
       </ul>
     ]]>
     </change-notes>
