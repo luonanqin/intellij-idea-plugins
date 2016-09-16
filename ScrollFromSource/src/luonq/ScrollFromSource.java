@@ -32,17 +32,11 @@ public class ScrollFromSource extends AnAction {
 		if (selectedTextEditor != null) {
 			selectElementAtCaret(selectedTextEditor);
 			return;
-		} else {
-			LOG.error("selectedTextEditor is null!");
 		}
 	}
 
 	private void selectElementAtCaret(@NotNull Editor editor) {
 		final PsiFile file = PsiDocumentManager.getInstance(myProject).getPsiFile(editor.getDocument());
-		if (file == null) {
-			LOG.error("psiFile is null");
-			return;
-		}
 
 		scrollFromFile(file, editor);
 	}

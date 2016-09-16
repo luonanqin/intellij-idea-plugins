@@ -13,6 +13,10 @@
     ]]></description>
 
     <change-notes><![CDATA[
+      <p>1.1.3:</p>
+      <ul>
+        <li>Fix: disable all null judgement</li>
+      </ul>
       <p>1.1.2:</p>
       <ul>
         <li>Fix: Prevent null pointer error when PhpStorm 10 cannot find project window</li>
